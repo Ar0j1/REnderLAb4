@@ -1,0 +1,10 @@
+<div class="controll-add">
+   <input id="name_field" type="Text" class="form-control" value="{{updateElement.name}}" placeholder="name"/>
+    <input id="number_field" type="Text" class="form-control" value="{{updateElement.phone}}" placeholder="number"/>
+
+</div>
+<div>
+    <input type="button" class="butadd" value="Изменить" onclick="update('{{updateElement.name}}')"/>
+    <input type="button" class="butadd" value="Удалить" onclick="deletee('{{updateElement.name}}')"/>
+    {{cancelButton}}
+</div>

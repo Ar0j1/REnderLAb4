@@ -1,0 +1,14 @@
+[
+    {
+        "name": "John Doe",
+        "phone": "123456123"
+    },
+    {
+        "name": "Jane Smith",
+        "phone": "654321"
+    },
+    {
+        "name": "Alice Johnson",
+        "phone": "345621"
+    }
+]

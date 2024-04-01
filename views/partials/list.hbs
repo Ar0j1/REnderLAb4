@@ -1,0 +1,26 @@
+<div >
+    {{#if blocked}}
+        <style>
+            .disabled-link {
+                pointer-events: none;
+            }
+             ul {
+                width: 500px;
+                height: 200px; /* Set the desired fixed height */
+                overflow-y: auto; /* Enable vertical scrolling */
+            }
+        </style>
+    {{/if}}
+    <ul>
+        {{#each users}}
+        <a class="row disabled-link" href="/update?name={{this.name}}">
+            <li class="user-container">
+                
+                    <p class="elem">{{this.name}}</p>
+                    <p class="elem">{{this.phone}}</p>  
+                
+            </li>
+            </a>
+        {{/each}}
+    </ul>
+</div>

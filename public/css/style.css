@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    border: 2px solid #6d2828;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .butadd{
+    width: 45%;
+    background-color: white;
+    border: 1px solid #000000; /* Оставляем границы */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .addbut{
+    width: 100%;
+  background-color: white;
+  border: 1px solid #000000; /* Оставляем границы */
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  }
+  .user-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+  }
+  ul{
+    padding-left: 0;
+  }
+  .elemString {
+    text-decoration: none; 
+  }
+  
+  .elemString:hover {
+    text-decoration: none; 
+  }
+  
+  .elem {
+    color: black;
+    display: inline-block; 
+    margin-right: 30px;
+  }
+  ul {
+    list-style-type: none; /* Убираем маркеры у списка */
+  }
+  
