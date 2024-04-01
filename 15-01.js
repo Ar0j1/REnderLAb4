@@ -29,9 +29,10 @@ const users = JSON.parse(rawData);
 });
 app.get("/update", (req, res) => {
   let name = req.query.name;
+  let phone = req.query.phone;
   const rawData = fs.readFileSync('phonebook.json');
 const users = JSON.parse(rawData);
-  let element = users.find(i => i.name === name);
+  let element = users.find(i => i.name === name || i.phone === phone);
 
   res.render('index2', { users: users, blocked: false, updateElement: element });
 });
@@ -52,7 +53,16 @@ app.post('/add', (req, res) => {
 
     // Преобразуем JSON строку в объект
     let contacts = JSON.parse(data);
-
+    let count = 0;
+    contacts.forEach(i => {
+      if (i.name === name){
+        count++;
+      }})
+      if(count >0){
+        console.log('Такой контакт уже существует');
+        res.redirect('/');
+        return;
+      }
     // Добавляем новый контакт в массив контактов
     contacts.push({ name: name, phone: phone });
 

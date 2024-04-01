@@ -6,17 +6,14 @@ function loadAddForm() {
         });
 }
 function add() {
-    // Сбор данных из полей ввода
     let name = document.getElementById('name_field').value;
     let phone = document.getElementById('number_field').value;
-
-    // Создание объекта с данными
+   
     let data = {
         name: name,
         phone: phone
     };
 
-    // Выполнение POST-запроса через AJAX
     fetch('/add', {
         method: 'POST',
         headers: {
@@ -34,7 +31,6 @@ function update (originalName) {
     let name = document.getElementById('name_field').value;
     let phone = document.getElementById('number_field').value;
 
-    // Создание объекта с данными
     let data = {
         originalname: originalName,
         name: name,

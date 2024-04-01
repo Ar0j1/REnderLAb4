@@ -1,8 +1,15 @@
 <div class="controll-add">
     <input id="name_field" type="Text" class="form-control" placeholder="name"/>
-    <input id="number_field" type="Text" class="form-control" placeholder="number"/>
+    <input id="number_field" type="number" class="form-control" placeholder="number"/>
 </div>
 <div>
     <input type="button" class="butadd" value="Добавить" onclick="add()"/>
     {{cancelButton}}
 </div>
+<script>
+    let elt = document.getElementById("number_field");
+
+elt.addEventListener("input", e => {
+  e.target.value = e.target.value < 0 ? 0 : e.target.value > 9999999999 ? 9999999999 : e.target.value;
+});
+</script>
