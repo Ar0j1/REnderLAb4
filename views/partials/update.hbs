@@ -4,7 +4,16 @@
 
 </div>
 <div>
+    
     <input type="button" class="butadd" value="Изменить" onclick="update('{{updateElement.name}}')"/>
-    <input type="button" class="butadd" value="Удалить" onclick="deletee('{{updateElement.name}}')"/>
+    <input type="button" id="delbut" class="butadd" value="Удалить" onclick="deletee('{{updateElement.name}}')"/>
     {{cancelButton}}
 </div>
+<script>
+    document.getElementById('name_field').addEventListener('input', (event) => {
+        document.getElementById('delbut').disabled = true;
+    })
+    document.getElementById('number_field').addEventListener('input', (event) => {
+        document.getElementById('delbut').disabled = true;
+    })
+</script>
